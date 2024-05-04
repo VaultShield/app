@@ -47,7 +47,7 @@ Before you begin, ensure you have met the following requirements:
 To clone this project along with its submodules, you need to run the following command:
 
 ```bash
-git clone --recurse-submodules https://github.com/your-username/project-name.git
+git clone --recurse-submodules https://github.com/VaultShield/app.git
 ```
 This command clones the main repository and initializes and updates each submodule in the repository.
 

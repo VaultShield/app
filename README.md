@@ -76,6 +76,7 @@ for windows:
 ```
 for MacOs or Linux users
 ```bash
+chmod +x start.sh
 ./start.sh
 ```
 

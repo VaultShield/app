@@ -18,6 +18,16 @@ After cloning the repository, ensure all submodules are fully updated and in the
 ```bash
 git submodule update --init --recursive --remote
 ```
+## Configure the project
+You will need to create a .env following the specifications of the .env.example
+```yml
+JWT_SECRET=EXAMPLE_64_CHARACTERS
+JWT_RECOVER=EXAMPLE_64_CHARACTERS
+POSTGRES_PASSWORD=EXAMPLE_20_CHARACTERS
+```
+
+Fill in the necessary data and save it in a file called ".env"
+
 ## Running the Project
 for windows:
 ```bash

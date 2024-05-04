@@ -1,33 +1,15 @@
 # VaultShield Deploy App
 
 <p align="center">
-    <a href="https://github.com/VaultShield/frontend">
-        <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
-    </a>
-    <a href="https://github.com/VaultShield/backend">
-        <img src="https://img.shields.io/badge/-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
-    </a>
-    <a href="https://github.com/VaultShield/backend">
-        <img src="https://img.shields.io/badge/-Golang-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
-    </a>
-    <a href="#">
-        <img src="https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square" alt="Build Status">
-    </a>
-    <a href="https://maven.apache.org/">
-        <img src="https://img.shields.io/badge/Maven-3.9.6-blue.svg?style=flat-square" alt="Maven">
-    </a>
-    <a href="https://www.docker.com/">
-        <img src="https://img.shields.io/badge/Docker-25.0.2-blue.svg?style=flat-square" alt="Docker">
-    </a>
-    <a href="https://opensource.org/licenses/MIT">
-        <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License: MIT">
-    </a>
-    <a href="https://yarnpkg.com/">
-        <img src="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=flat-square&logo=yarn&logoColor=white" alt="Yarn">
-    </a>
-    <a href="https://vitejs.dev/">
-        <img src="https://img.shields.io/badge/Vite-B73BFE?style=flat-square&logo=vite&logoColor=FFD62E" alt="Vite.js">
-    </a>
+    <a href="https://github.com/VaultShield/frontend"><img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"></a>
+    <a href="https://github.com/VaultShield/backend"><img src="https://img.shields.io/badge/-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java"></a>
+    <a href="https://github.com/VaultShield/backend"><img src="https://img.shields.io/badge/-Golang-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go"></a>
+    <a href="#"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square" alt="Build Status"></a>
+    <a href="https://maven.apache.org/"><img src="https://img.shields.io/badge/Maven-3.9.6-blue.svg?style=flat-square" alt="Maven"></a>
+    <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-25.0.2-blue.svg?style=flat-square" alt="Docker"></a>
+    <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License: MIT"></a>
+    <a href="https://yarnpkg.com/"><img src="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=flat-square&logo=yarn&logoColor=white" alt="Yarn"></a>
+    <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-B73BFE?style=flat-square&logo=vite&logoColor=FFD62E" alt="Vite.js"></a>
 </p>
 
 
@@ -56,15 +38,36 @@ After cloning the repository, ensure all submodules are fully updated and in the
 ```bash
 git submodule update --init --recursive --remote
 ```
+The default is to use master, but if you need to deploy another branch, access the branch and make a git switch to the branch you need
+
 ## Configure the project
-You will need to create a .env following the specifications of the .env.example
-```yml
+You will need to create a **.env** following the specifications of the .env.example
+
+example:
+```env
 JWT_SECRET=EXAMPLE_64_CHARACTERS
 JWT_RECOVER=EXAMPLE_64_CHARACTERS
 POSTGRES_PASSWORD=EXAMPLE_20_CHARACTERS
 ```
 
-Fill in the necessary data and save it in a file called ".env"
+and you need add a **.env.local** in frontend
+
+example:
+```env
+VITE_SECRET_KEY=PASS
+VITE_BASE_URL=http://localhost:8080/
+VITE_REGISTER_URL=api/auth/register
+VITE_LOGIN_URL=api/auth/login
+VITE_REFRESH_TOKEN_URL=api/auth/refreshtoken
+VITE_RECOVER_URL=api/auth/recover
+VITE_USER_URL=api/user/
+VITE_SEARCH_USER_URL=api/user/search
+VITE_CREDENTIAL_URL=api/credential/
+VITE_ADD_CREDENTIAL_URL=api/credential/insert
+VITE_FINDALL_CREDENTIAL_URL=api/credential/find-all/
+```
+
+Fill in the necessary data and save it in a file called ".env" and ".env.local"
 
 ## Running the Project
 for windows:
@@ -75,6 +78,8 @@ for MacOs or Linux users
 ```bash
 ./start.sh
 ```
+
+**And you get it!!**
 
 ## Updating Submodules
 You can use the latest submodule update available with the develop's branches:
